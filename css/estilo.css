@@ -1,0 +1,145 @@
+#principal{
+    background-color: yellow;
+    width: 1000px;
+    height: auto;
+    margin-left:13%;
+    padding: 10px;
+}
+#principal header{
+    padding: 10px;
+    height: 175px;
+}
+
+#principal header img{
+    width: 200px;
+}
+
+#logo{
+    float: left;
+}
+
+#apoiadores{
+    float: right;
+}
+
+#letreiro{
+    padding-top: 10px;
+    position: absolute;
+    top: 28px;
+    left: 402px;
+    width: 380px;
+    height: 135px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+}
+
+#letreiro1{
+    position: absolute;
+    padding-top: 10px;
+    top: 26px;
+    left: 400px;
+    width: 380px;
+    height: 135px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+
+#usuario{
+    float: right;
+    width: 200px;
+    height: 144px;
+}
+
+#login{
+    font-size: 12px;
+}
+
+#principal header nav{
+    margin-top: 150px;
+    margin-left: -31px;
+}
+
+#principal header nav ul{
+    text-align: center;
+}
+
+#principal header nav ul li{
+    display: inline-block;
+    margin: 2px 6px 2px 0px;
+    list-style-type: none;
+    float: left;
+    font-size: 20px;
+}
+
+#principal header nav ul li a{
+    color: white;
+    background-color: black;
+    text-decoration: none;
+    padding: 2px 5px;
+}
+
+#principal header nav ul li a:hover{
+    background-color: blue;
+    text-decoration: none;
+}
+
+#principal article iframe{
+    background-color: white;
+    width: 200px;
+    height: auto;
+    margin-top: 10px;
+}
+
+#principal footer{
+    background-color: blue;
+    width: 1000px;
+    height: auto;
+    margin-top: 10px;
+    text-align: center;
+    padding: 2px;
+}
+
+#principal footer nav {
+    width: 500px;
+    padding: 2px;
+}
+
+#cabecalho{
+    width: 400px;
+}
+
+#cabecalho1{
+    width: 400px;
+    height: 170px;
+    margin-left: 400px;
+    margin-top: -170px;
+}
+
+#principal footer nav ul{
+    text-align: center;
+}
+
+#principal footer nav ul li{
+    margin: 5px 6px 2px 0px;
+    list-style-type: none;
+}
+
+#principal footer nav ul li a{
+    color: white;
+    text-decoration: none;
+    padding: 2px 5px;
+}
+
+#principal footer nav ul li a:hover{
+    text-decoration: none;
+}
+
+#principal footer nav div{
+    position: absolute;
+    padding: 100px;
+}
+
