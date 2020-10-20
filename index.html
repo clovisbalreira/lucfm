@@ -6,69 +6,41 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script language="javascript" src="js/formula.js"></script>
         <link rel="stylesheet" href="css/estilo.css" type="text/css">
+        <link rel="stylesheet" href="css/home.css" type="text/css">
     </head>
     <body>
         <div id="principal">
-            <
             <header>
-                <img id="logo" src="imagem/logo.png">
-                <img id="apoiadores" src="imagem/logo.png">
-                <div id="letreiro">
-                    <p>
-                        LIGA UNIÃO CANOENSE DE FUTEBOL DE MESA
-                    </p>
-                </div>
-                <div id="letreiro1">
-                    <p>
-                        LIGA UNIÃO CANOENSE DE FUTEBOL DE MESA
-                    </p>
-                </div>
-                <div id="usuario">
-                    <p id="login">USUARIO</p>
-                    <input type="email">
-                    <p id="login">SENHA</p>
-                    <input type="password">
-                    <input type="submit" value="LOGIN">
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Torneios Internos</a></li>
-                        <li><a href="#">Torneios Integração</a></li>
-                        <li><a href="#">Participações Em Torneios</a></li>
-                        <li><a href="#">Estatuto L.U.C.F.M.</a></li>
-                        <li><a href="#">Mercado Da Bola</a></li>
-                    </ul>
-                </nav>
-            </header>
+                <iframe src="cabecalho.html" id="iframeCabecalho"></iframe>
+             </header>
             <article>
-                <iframe name="lucmf"></iframe>
+                <div class="fundo">
+                    <div id="tabela">
+                        <table>
+                            <thead>
+                            <tr><td>COL.</td><td>Tecnico</td><td>PG</td><td>J</td><td>V</td><td>E</td><td>D</td><td>GP</td><td>GC</td><td>SG</td><td>%</td></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>1º</td><td>Cesar</td><td>26</td><td>13</td><td>7</td><td>5</td><td>1</td><td>23</td><td>9</td><td>14</td><td>67%</td></tr>
+                                <tr><td>2º</td><td>Daniel</td><td>20</td><td>12</td><td>5</td><td>5</td><td>2</td><td>7</td><td>5</td><td>2</td><td>56%</td></tr>
+                                <tr><td>3º</td><td>Paulo Ricardo</td><td>18</td><td>14</td><td>5</td><td>3</td><td>6</td><td>13</td><td>16</td><td>-3</td><td>43%</td></tr>
+                                <tr><td>4º</td><td>Dirceu</td><td>16</td><td>10</td><td>5</td><td>1</td><td>4</td><td>14</td><td>12</td><td>2</td><td>53%</td></tr>
+                                <tr><td>5º</td><td>Marcelo</td><td>15</td><td>10</td><td>4</td><td>3</td><td>3</td><td>6</td><td>6</td><td>0</td><td>50%</td></tr>
+                                <tr><td>6º</td><td>Jamur</td><td>12</td><td>7</td><td>3</td><td>3</td><td>1</td><td>8</td><td>4</td><td>4</td><td>57%</td></tr>
+                                <tr><td>7º</td><td>Motta</td><td>7</td><td>6</td><td>2</td><td>1</td><td>3</td><td>8</td><td>12</td><td>-4</td><td>39%</td></tr>
+                                <tr><td>8º</td><td>Paulo Renato</td><td>6</td><td>8</td><td>1</td><td>3</td><td>4</td><td>6</td><td>9</td><td>-3</td><td>25%</td></tr>
+                                <tr><td>9º</td><td>Fernando</td><td>6</td><td>13</td><td>1</td><td>3</td><td>9</td><td>8</td><td>20</td><td>-12</td><td>15%</td></tr>
+                                <tr><td>10º</td><td>Claudio</td><td>6</td><td>3</td><td>2</td><td>0</td><td>1</td><td>4</td><td>2</td><td>2</td><td>67%</td></tr>
+                                <tr><td>11º</td><td>Fabio</td><td>4</td><td>4</td><td>1</td><td>1</td><td>2</td><td>5</td><td>7</td><td>-2</td><td>33%</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="noticia"></div>
+                    <div id="localizacao"></div>
+                </div>
             </article>
             <footer>
-                <div id="cabecalho">
-                    <nav>
-                        <ul>
-                            <li>Menu</li>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Torneios Internos</a></li>
-                            <li><a href="#">Torneios Integração</a></li>
-                            <li><a href="#">Participações Em Torneios</a></li>
-                            <li><a href="#">Estatuto L.U.C.F.M.</a></li>
-                            <li><a href="#">Mercado Da Bola</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div id="cabecalho1">
-                    <nav>
-                        <ul>
-                            <li>Apoiadores</li>
-                            <li><a href="#">Cavalheiros Barbearia</a></li>
-                            <li><a href="#">Omatic</a></li>
-                            <li><a href="#">Print Color</a></li>
-                            <li><a href="#">Rafael Botões</a></li>
-                        </ul>
-                    </nav>
-                </div>
+                <iframe src="rodape.html" id="iframeRodape"></iframe>
             </footer>
         </div>
     </body>

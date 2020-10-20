@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+#tabela{
+    background-color: antiquewhite;
+}
+
+#noticia{
+    background-color: rgb(32, 21, 7);
+}
+
+#localizacao{
+    width: 1150px;
+    height: 1000px;
+    margin: 23px;
+}
+
+#tabela , #noticia {
+    display: inline-block;
+    width: 550px;
+    height: 350px;
+    margin: 23px;
+}
+
+#tabela , #noticia , #localizacao{
+    background-image: linear-gradient(30deg,var(--amarelo0),var(--amarelo1));
+    border-radius: 20px;
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.575);
+}
