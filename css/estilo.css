@@ -1,0 +1,122 @@
+@charset "UTF-8";
+
+:root{
+    --verde0:#175B17;
+    --verde1:#4b9c4c;
+    --azul0:#03336C;
+    --azul1:#244d77;
+    --amarelo0: #fcf977;
+    --amarelo1:#fcfc00;
+}    
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1 , h2 , h3 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 , #logoTitulo{
+    font-size: 4em;
+}
+
+#logoTitulo{
+    font-weight: bolder;
+    color: rgb(231, 214, 214);
+    text-shadow: 4px 4px #0000007a;
+}
+
+h2{
+    font-size: 1.5em;
+    font-style: italic;
+}
+
+h3{
+    font-size: 1.4em;
+}
+
+p{
+    font-size: 1.2em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body{
+    background-image: linear-gradient(30deg,var(--verde0),var(--verde1));
+}
+
+header , main , footer{
+    background-image: linear-gradient(90deg,var(--azul0),var(--azul1));
+    min-width: 320px;
+    max-width: 1200px;
+    height: auto;
+    margin: 0px auto;
+}
+
+picture img{
+    padding: 20px;
+}
+
+#logoEsquerda{
+    display: inline-block;
+}
+
+#logoCentral{
+    display: inline-block;
+    text-align: center;
+    padding: 2em;
+}
+
+#logoDireita{
+    display: block;
+    float: right;
+}
+
+nav{
+    padding-bottom: 1em;
+}
+
+nav ul{
+    text-align: center;
+}
+
+nav ul li{
+    display: inline-block;
+    margin: 2px 6px 2px 0px;
+    list-style-type: none;
+    font-size: 20px;
+}
+
+nav ul li a{
+    background-image: linear-gradient(180deg,var(--amarelo0),var(--amarelo1));
+    color: var(--azul0);    
+    text-decoration: none;
+    border-radius: 500px;
+    padding: 2px 8px;
+}
+
+nav ul li a:hover{
+    background-image: linear-gradient(30deg,var(--verde0),var(--verde1));
+    color: var(--amarelo1);
+    text-decoration: none;
+}
+
+.fundo{
+    background-image: linear-gradient(90deg,var(--azul0),var(--azul1));
+}
+
+.menu{
+    height: 2.6em;
+}
+
+main{
+    padding-bottom: 1em;
+}
+
+footer{
+    display: block;
+    text-align: center;
+}
+
