@@ -19,11 +19,11 @@ h1 , h2 , h3 {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-h1 , #logoTitulo{
+h1 , .logoTitulo{
     font-size: 4em;
 }
 
-#logoTitulo{
+.logoTitulo{
     font-weight: bolder;
     color: rgb(231, 214, 214);
     text-shadow: 4px 4px #0000007a;
@@ -41,6 +41,7 @@ h3{
 p{
     font-size: 1.2em;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 0em 2em;
 }
 
 body{
@@ -59,6 +60,10 @@ picture img{
     padding: 20px;
 }
 
+#logoEsquerda,#logoCentral,#logoDireita{
+    padding: 2em;
+}
+
 #logoEsquerda{
     display: inline-block;
 }
@@ -66,7 +71,6 @@ picture img{
 #logoCentral{
     display: inline-block;
     text-align: center;
-    padding: 2em;
 }
 
 #logoDireita{
@@ -118,5 +122,32 @@ main{
 footer{
     display: block;
     text-align: center;
+    padding-bottom: 1em;
+}
+#fonteRodape{
+    display: inline-block;
+    margin-right: 1em;
+    font-size: 2em;
 }
 
+#icones{
+    display: inline-block;
+}
+
+
+#icones a{
+    display: inline-flex;
+    width: 35px;
+    height: 40px;
+    background: var(--verde1);
+    color: var(--azul1);
+    margin: 0 5px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+#icones a:hover{
+    background: var(--azul1);
+}
