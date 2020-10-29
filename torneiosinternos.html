@@ -40,12 +40,9 @@
         </header>
         <main>
             <article class="fundoGrande postNoticias">
-                <h2>Voltamos!!!!</h2>
-                <picture>
-                    <source media="(max-width: 800px" srcset="imagem/voltemos-post.jpg">
-                    <img class="fotoBlog" src="imagem/voltemos-blog.jpg" alt="L.U.C.F.M.">
-                </picture>
-                <p>Depois de um tempo parado por causa da pandemia.<br>Estamos voltando com o nosso 9º campeonato.</p>
+                <h2>Campeonatos L.U.C.F.M. ( Liga Canoense de Futebol de Mesa )</h2>
+                <section  class="tabelasCampeonatos">
+                </section>
             </article>
         </main>
         <footer>
@@ -61,7 +58,14 @@
                         </div></h2>
                 </div>
             </article>
-            </article>
         </footer>
+        <script>
+            var campeonato = [campeonato1,campeonato2,campeonato3,campeonato4,campeonato5,campeonato6,campeonato7,campeonato8,campeonato9];
+            var tbody = criarClasseTbody(campeonato);
+
+            for(var i = campeonato.length-1 ; i >= 0 ; i-- ){
+                criarTabelaToda(campeonato[i],tbody[i],i);
+        }
+        </script>
     </body>
 </html>

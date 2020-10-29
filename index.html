@@ -5,14 +5,33 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="imagem/lucfm-icon.ico" type="image/x-icon">
-        <script language="javascript" src="js/formula.js"></script>
         <link rel="stylesheet" href="css/estilo.css" type="text/css">
         <link rel="stylesheet" href="css/principal.css" type="text/css">
         <link rel="stylesheet" href="css/responsivo.css" type="text/css">
+        <link rel="stylesheet" href="css/menu.css" type="text/css">
+        <script src="js/campeonato.js"></script>
+        <script src="js/tabela.js"></script>
     </head>
     <body>
         <header>
-            <section class="fundo azul">
+            <nav id="container" class="fundo">
+                <input type="checkbox" id="checkbox-menu">
+                <label for="checkbox-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="noticias.html">Noticias</a></li>
+                    <li><a href="torneiosinternos.html">Torneios Internos</a></li>
+                    <li><a href="torneiosexternos.html">Torneios Integração</a></li>
+                    <li><a href="ranking.html">Ranking</a></li>
+                    <li><a href="estatuto.html">Estatuto L.U.C.F.M.</a></li>
+                    <li><a href="contado.html">Contado</a></li>
+                </ul>
+            </nav>
+        <section class="fundo azul">
                 <picture></picture>  
                     <img id="logoEsquerda"
                     src="imagem/lucfm-menu.png" alt="Liga Canoense de Futebol de Mesa">
@@ -25,57 +44,35 @@
                 <picture>
                     <img id="logoDireita" src="imagem/lucfm-menu.png" alt="Liga Canoense de Futebol de Mesa">
                 </picture>
-                <nav class="fundo">
+               <nav id ="menu" class="fundo">
                     <ul>
-                        <li><a href="index.html" target="principal">Home</a></li>
-                        <li><a href="noticias.html" target="principal">Noticias</a></li>
-                        <!--<li><a href="torneiosinternos.html">Torneios Internos</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="noticias.html">Noticias</a></li>
+                        <li><a href="torneiosinternos.html">Torneios Internos</a></li>
                         <li><a href="torneiosexternos.html">Torneios Integração</a></li>
                         <li><a href="ranking.html">Ranking</a></li>
                         <li><a href="estatuto.html">Estatuto L.U.C.F.M.</a></li>
-                        <li><a href="contado.html">Contado</a></li>-->
+                        <li><a href="contado.html">Contado</a></li>
                     </ul>
                 </nav>
             </section>
         </header>
         <main>
-            <article id="tabela">
-                <table id="tabelaCompleta">
-                    <caption>9º Campeonato L.U.C.F.M.</caption>
-                    <thead>
-                        <tr><th scope="col">COL.</th><th scope="col">Tecnico</th><th scope="col">PG</th><th scope="col">J</th><th scope="col">V</th><th scope="col">E</th><th scope="col">D</th><th scope="col">GP</th><th scope="col">GC</th><th scope="col">SG</th><th scope="col">%</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>1º</td><td>Cesar</td><td>26</td><td>13</td><td>7</td><td>5</td><td>1</td><td>23</td><td>9</td><td>14</td><td>67%</td></tr>
-                        <tr><td>2º</td><td>Daniel</td><td>20</td><td>12</td><td>5</td><td>5</td><td>2</td><td>7</td><td>5</td><td>2</td><td>56%</td></tr>
-                        <tr><td>3º</td><td>Paulo Ricardo</td><td>18</td><td>14</td><td>5</td><td>3</td><td>6</td><td>13</td><td>16</td><td>-3</td><td>43%</td></tr>
-                        <tr><td>4º</td><td>Dirceu</td><td>16</td><td>10</td><td>5</td><td>1</td><td>4</td><td>14</td><td>12</td><td>2</td><td>53%</td></tr>
-                        <tr><td>5º</td><td>Marcelo</td><td>15</td><td>10</td><td>4</td><td>3</td><td>3</td><td>6</td><td>6</td><td>0</td><td>50%</td></tr>
-                        <tr><td>6º</td><td>Jamur</td><td>12</td><td>7</td><td>3</td><td>3</td><td>1</td><td>8</td><td>4</td><td>4</td><td>57%</td></tr>
-                    </tbody>
-                </table>
-                <table id="tabelaMini">
-                    <caption>9º Campeonato L.U.C.F.M.</caption>
-                    <thead>
-                        <tr><th scope="col">COL.</th><th scope="col">Tecnico</th><th scope="col">PG</th><th scope="col">J</th><th scope="col">V</th><th scope="col">GP</th><th scope="col">GC</th><th scope="col">SG</th>
-                    </thead>
-                    <tbody>
-                        <tr><td>1º</td><td>Cesar</td><td>26</td><td>13</td><td>7</td><td>23</td><td>9</td><td>14</td></tr>
-                        <tr><td>2º</td><td>Daniel</td><td>20</td><td>12</td><td>5</td><td>7</td><td>5</td><td>2</td></tr>
-                        <tr><td>3º</td><td>Paulo Ricardo</td><td>18</td><td>14</td><td>5</td><td>13</td><td>16</td><td>-3</td></tr>
-                        <tr><td>4º</td><td>Dirceu</td><td>16</td><td>10</td><td>5</td><td>14</td><td>12</td><td>2</td></tr>
-                        <tr><td>5º</td><td>Marcelo</td><td>15</td><td>10</td><td>4</td><td>6</td><td>6</td><td>0</td></tr>
-                        <tr><td>6º</td><td>Jamur</td><td>12</td><td>7</td><td>3</td><td>8</td><td>4</td><td>4</td></tr>
-                    </tbody>
-                </table>
+            <a href="torneiosinternos.html" id="link">
+                <article id="tabela">
+                    <section  class="tabelasCampeonatos">
+                    </section>
             </article>
-            <section id="noticia">
+        </a>
+            <a href="noticias.html">
+                <section id="noticia">
                 <h2>Voltamos!!!!</h2>
                 <picture>
                     <img id="postHome" src="imagem/voltemos-post.jpg" alt="Voltamos com o campeonato">
                 </picture>
                 <p>Depois de um tempo parado voltamos a ativa.</p>
             </section>
+            </a>
             <section class="fundoGrande">
                 <h2>Liga Canoense de Futebol de Mesa</h2>
                 <picture>
@@ -95,14 +92,19 @@
                 <h2 id="fonteRodape"
                     class="logoTitulo">Siga em nossas Redes :</h2>
                     <div id="icones"><a href="https://www.facebook.com/Oficial.Lucfm/" target="_black">
-                            <!--<img src="imagem/facebook.png" alt="Facebook">--></a>
+                            <img src="imagem/facebook.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/lucfuteboldemesa/" target="_black">
+                        <img src="imagem/instagram.png" alt="Instagram"></a>
                     <a href="" target="_black">
-                        <!--<img src="imagem/instagram.png" alt="Instagram">--></a>
-                    <a href="" target="_black">
-                        <!--<img src="imagem/youtube.png" alt="You tube">--></a>
+                        <img src="imagem/youtube.png" alt="You tube"></a>
                         </div></h2>
                 </div>
             </article>
         </footer>
+        <script>
+            var campeonato = totalCampeonatos();
+            var tbody = criarClasseTbody(campeonato);
+            criarTabelaToda(campeonato9,tbody[0],campeonato.length-1);
+        </script>
     </body>
 </html>
