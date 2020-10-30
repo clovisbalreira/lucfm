@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <title>L.U.C.F.M. - Liga Canoense de Futebol de Mesa - Noticias</title>
+        <title>L.U.C.F.M. - Liga Canoense de Futebol de Mesa - Estatuto</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="imagem/lucfm-icon.ico" type="image/x-icon">
@@ -17,8 +17,8 @@
         <link rel="stylesheet" href="css/responsivo-1107.css" type="text/css">
         <link rel="stylesheet" href="css/responsivo-530.css" type="text/css">
         <link rel="stylesheet" href="css/menu.css" type="text/css">
-        <script src="js/noticias.js"></script>
-        <script src="js/post.js"></script>
+        <script src="js/campeonato.js"></script>
+        <script src="js/tabela.js"></script>
     </head>
     <body>
         <header>
@@ -47,10 +47,9 @@
                 <picture>
                     <img id="logoDireita" src="imagem/lucfm-menu.png" alt="Liga Canoense de Futebol de Mesa">
                 </picture>
-                <nav id ="menuNavegacao"
-                class="fundo">
+                <nav id ="menuNavegacao" class="fundo">
                     <ul>
-                        <li><a href="index.html" >Home</a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="noticias.html" >Noticias</a></li>
                         <li><a href="torneiosinternos.html">Torneios Internos</a></li>
                         <li><a href="torneiosexternos.html">Torneios Integração</a></li>
@@ -63,6 +62,9 @@
         </header>
         <main>
             <article class="fundoGrande postNoticias">
+                <h2>Atualizando....</h2>
+                <section  class="tabelasCampeonatos">
+                </section>
             </article>
         </main>
         <footer>
@@ -78,13 +80,7 @@
                         </div></h2>
                 </div>
             </article>
-            <script>
-                var posts = [postA,post1];
-                for(var i =  0 ; i < posts.length ; i++ ){
-                    atualizacaoPost(posts[i][0],posts[i][1],posts[i][2],i);
-                }
-                </script>
-            <script src="js/btnMenu.js"></script>
         </footer>
+        <script src="js/btnMenu.js"></script>
     </body>
 </html>

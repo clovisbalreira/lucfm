@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+#icones{
+    display: inline-block;
+}
+
+
+#icones a{
+    display: inline-flex;
+    width: 45px;
+    height: 45px;
+    background: var(--verde1);
+    color: var(--azul1);
+    margin: 0 5px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+#icones a:hover{
+    background: var(--azul1);
+}
+
+

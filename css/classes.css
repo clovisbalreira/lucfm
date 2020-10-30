@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+.logoTitulo{
+    font-weight: bolder;
+    color: rgb(231, 214, 214);
+    text-shadow: 4px 4px #0000007a;
+}
+
+.fundo{
+    background-image: linear-gradient(90deg,var(--azul0),var(--azul1));
+}
+
+.tabelasCampeonatos{
+    height: auto;
+}
+
+.link{
+    text-decoration: none;
+    color: black;
+}
+
+.postNoticias{
+    text-align: center;
+}
+
+.fundoGrande #mapa{
+    float: right;
+    width: 480px;
+    height: 250px;
+}
+
+.fundoGrande h2{
+    text-align: center;
+    font-size: 1.8em;
+}
+
+.fundoGrande h2 , .fundoGrande h3 ,.fundoGrande p{
+    padding: .6em;
+}
+
+.fundoGrande h2 , .fundoGrande #mapa{
+    display: inline-block;
+}
+
+.fotoBlog{
+    width: 90%;
+    padding: auto;
+}
+
+.fundoGrande{
+    min-width: 320px;
+    max-width: 1150px;
+    height: auto;
+    margin: 0px 23px;
+}
+
+.postHome{
+    margin-top : .7em; 
+}
+
+.visivel{
+    display: block;
+}
+
+.invisivel{
+    display: none;
+}

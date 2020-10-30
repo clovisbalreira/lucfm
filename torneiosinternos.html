@@ -1,19 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <title>L.U.C.F.M. - Liga Canoense de Futebol de Mesa</title>
+        <title>L.U.C.F.M. - Liga Canoense de Futebol de Mesa - Torneios Internos</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="imagem/lucfm-icon.ico" type="image/x-icon">
-        <link rel="stylesheet" href="css/estilo.css" type="text/css">
-        <link rel="stylesheet" href="css/principal.css" type="text/css">
-        <link rel="stylesheet" href="css/responsivo.css" type="text/css">
+        <link rel="stylesheet" href="css/reset.css" type="text/css">
+        <link rel="stylesheet" href="css/caixas.css" type="text/css">
+        <link rel="stylesheet" href="css/navegacao.css" type="text/css">
+        <link rel="stylesheet" href="css/ids.css" type="text/css">
+        <link rel="stylesheet" href="css/classes.css" type="text/css">
+        <link rel="stylesheet" href="css/menuBtn.css" type="text/css">
+        <link rel="stylesheet" href="css/icones.css" type="text/css">
+        <link rel="stylesheet" href="css/tabela.css" type="text/css">
+        <link rel="stylesheet" href="css/responsivo-1180.css" type="text/css">
+        <link rel="stylesheet" href="css/responsivo-1107.css" type="text/css">
+        <link rel="stylesheet" href="css/responsivo-530.css" type="text/css">
+        <link rel="stylesheet" href="css/menu.css" type="text/css">
         <script src="js/campeonato.js"></script>
         <script src="js/tabela.js"></script>
     </head>
     <body>
         <header>
-            <section class="fundo">
+            <nav id="container" class="fundo">
+                <a href="#menu" class="btnMenu btnMenuOpen">Menu</a>
+                <ul class="menuUl">
+                    <li class="btnMenu btnMenuClose">Sair</li>
+                    <li class="menuItem"><a href="index.html" class="menuItemAcao">Home</a></li>
+                    <li class="menuItem"><a href="noticias.html" class="menuItemAcao">Noticias</a></li>
+                    <li class="menuItem"><a href="torneiosinternos.html" class="menuItemAcao">Torneios Internos</a></li>
+                    <li class="menuItem"><a href="torneiosexternos.html" class="menuItemAcao">Torneios Integração</a></li>
+                    <li class="menuItem"><a href="ranking.html" class="menuItemAcao">Ranking</a></li>
+                    <li class="menuItem"><a href="estatuto.html" class="menuItemAcao">Estatuto L.U.C.F.M.</a></li>
+                    <li class="menuItem"><a href="contado.html" class="menuItemAcao">Contado</a></li>
+                </ul>
+            </nav>
+        <section class="fundo">
                 <picture>
                     <img id="logoEsquerda" src="imagem/lucfm-menu.png" alt="Liga Canoense de Futebol de Mesa">
                 </picture>
@@ -25,15 +47,15 @@
                 <picture>
                     <img id="logoDireita" src="imagem/lucfm-menu.png" alt="Liga Canoense de Futebol de Mesa">
                 </picture>
-                <nav class="fundo">
+                <nav id ="menuNavegacao" class="fundo">
                     <ul>
-                        <li><a href="index.html" >Home</a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="noticias.html" >Noticias</a></li>
                         <li><a href="torneiosinternos.html">Torneios Internos</a></li>
-                        <!--<li><a href="torneiosexternos.html">Torneios Integração</a></li>
+                        <li><a href="torneiosexternos.html">Torneios Integração</a></li>
                         <li><a href="ranking.html">Ranking</a></li>
                         <li><a href="estatuto.html">Estatuto L.U.C.F.M.</a></li>
-                        <li><a href="contado.html">Contado</a></li>-->
+                        <li><a href="contado.html">Contado</a></li>
                     </ul>
                 </nav>
             </section>
@@ -60,12 +82,15 @@
             </article>
         </footer>
         <script>
-            var campeonato = [campeonato1,campeonato2,campeonato3,campeonato4,campeonato5,campeonato6,campeonato7,campeonato8,campeonato9];
-            var tbody = criarClasseTbody(campeonato);
-
-            for(var i = campeonato.length-1 ; i >= 0 ; i-- ){
-                criarTabelaToda(campeonato[i],tbody[i],i);
+            var campeonato = [campeonato1,campeonato2,campeonato3,campeonato4,campeonato5,campeonato6,campeonato7,campeonato8,campeonatoA];
+            var thead = criarClasse(campeonato,"thead");
+            var tbody = criarClasse(campeonato,"tbody");
+            var quantidade = campeonato.length-1;            
+            for(var i = quantidade ; i >= 0 ; i-- ){
+                criarTabelaToda(campeonato[i],thead[i],tbody[i],i ,quantidade);
         }
         </script>
+        <script src="js/btnMenu.js"></script>
+        <script src="js/escutarCampeonato.js"></script>
     </body>
 </html>

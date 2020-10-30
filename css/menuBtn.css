@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+.btnMenu{
+    display: block;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    padding: 20px 15px;
+    background-position: 15px center;
+} 
+.btnMenuOpen{
+    background-image: url(../imagem/hamburger.png);
+}
+
+.btnMenuClose{
+    background-color: silver;
+    background-image: url(../imagem/hamburgerSair.png);
+}

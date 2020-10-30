@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+#logoEsquerda,#logoCentral,#logoDireita{
+    padding: 2em;
+}
+
+#logoEsquerda{
+    display: inline-block;
+}
+
+#logoCentral{
+    display: inline-block;
+    text-align: center;
+}
+
+#logoDireita{
+    display: block;
+    float: right;
+}
+
+#fonteRodape{
+    display: inline-block;
+    margin-right: 1em;
+    font-size: 2em;
+}
+
+#home{
+    background-color: tomato;
+    height: 3000px;
+}
+
+#tabela , #noticia {
+    display: inline-block;
+    width: 46.1%;
+    height: 350px;
+    margin: 23px;
+}
+
+#noticia{
+    float: right;
+}
+
+#tabela , #noticia , .fundoGrande{
+    background-image: linear-gradient(30deg,var(--amarelo0),var(--amarelo1));
+    border-radius: 20px;
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.575);
+    padding: 1em 0em;
+}
+
+#postNoticias{
+    padding: 1em;
+    text-align: center;
+}
+
+#noticia h2 , #noticia p{
+    text-align: center;
+}
+
+#container{
+    display: none;
+}
+

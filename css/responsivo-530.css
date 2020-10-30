@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+@media(max-width: 530px){
+    table th:nth-child(6),table th:nth-child(7),table th:nth-child(11),table td:nth-child(6),table td:nth-child(7),table td:nth-child(11) {
+        display: none;
+    }
+     
+    #tabela , #noticia{
+        width: 88%;
+    }
+
+    .fundoGrande{
+        width: 88%;
+    }
+}
+

@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+:root{
+    --verde0:#175B17;
+    --verde1:#4b9c4c;
+    --azul0:#03336C;
+    --azul1:#244d77;
+    --amarelo0: #fcf977;
+    --amarelo1:#fcfc00;
+}    
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1 , h2 , h3 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 , .logoTitulo{
+    font-size: 4em;
+}
+
+h2{
+    font-size: 1.5em;
+    font-style: italic;
+}
+
+h3{
+    font-size: 1.4em;
+}
+
+p{
+    font-size: 1.2em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 0em 2em;
+}
+
+body{
+    background-image: linear-gradient(30deg,var(--verde0),var(--verde1));
+}
+
+
+

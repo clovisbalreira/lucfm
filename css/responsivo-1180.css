@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+@media(max-width: 1180px){
+    #logoCentral{
+        width: 80%;
+    }
+
+    #logoCentral{
+        width: 80%;   
+        padding : auto;
+    }
+    #logoDireita{
+        display: none;
+    }
+
+    #menu{
+        display: none;
+    }
+
+   #tabela , #noticia{
+        display : block;
+        width: 88%;
+        height: auto;
+        margin-top: 0em;
+    }
+
+    #tabela{
+        padding-top: 1em;
+    }
+
+    #noticia{
+        float: none;
+    }
+
+    .fundoGrande h2 , .fundoGrande #mapa{
+        display: block;
+    }
+
+    .fundoGrande{
+        width: 88%;
+    }
+
+    .fundoGrande #mapa{
+        float: none;
+        width: 88%;
+    }
+
+    #fonteRodape{
+        display: block;
+        font-size: 3em;
+    }
+}
+

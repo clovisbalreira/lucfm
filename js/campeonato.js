@@ -1,12 +1,4 @@
-function totalCampeonatos(){
-    var campeonato = [] ;
-    for(var i = 0 ; i < 9 ; i++){
-        campeonato.push("campeonato"+(i+1));
-    }
-    return campeonato;
-}
-
-var campeonato9 = [ ["Cesar","26","14","7","5","2","23","10","13","62%"],
+var campeonatoA = [ ["Cesar","26","14","7","5","2","23","10","13","62%"],
                    ["Daniel","20","12","5","5","2","7","5","2","56%"],
                     ["Paulo Ricardo","18","14","5","3","6","13","16","-3","43%"],
                     ["Dirceu","16","10","5","1","4","14","12","2","53%"],
