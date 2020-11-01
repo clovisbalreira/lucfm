@@ -25,10 +25,10 @@ td , th{
 }
 
 thead , th{
-    background-image: linear-gradient(90deg,var(--azul0),var(--azul1));
+    background-image: linear-gradient(90deg,var(--main0),var(--main1));
 }
 
 tbody{
-    background-image: linear-gradient(90deg,var(--verde0),var(--verde1));
+    background-image: linear-gradient(90deg,var(--body0),var(--body1));
 }
 

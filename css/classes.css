@@ -7,7 +7,7 @@
 }
 
 .fundo{
-    background-image: linear-gradient(90deg,var(--azul0),var(--azul1));
+    background-image: linear-gradient(90deg,var(--main0),var(--main1));
 }
 
 .tabelasCampeonatos{
@@ -21,6 +21,10 @@
 
 .postNoticias{
     text-align: center;
+}
+
+.postNoticias h2{
+    width: 100%;
 }
 
 .fundoGrande #mapa{
@@ -63,5 +67,27 @@
 }
 
 .invisivel{
-    display: none;
+    visibility: visible;
+}
+
+.competicaoDireita{
+    float: left;
+    width: 28%;
+}
+
+.competicaoEsquerda{
+    display: inline-block;
+    width: 70%;
+}
+
+.competicaoDireita h2{
+    text-align: left;
+}
+
+.estatuto h2{
+    margin-top: 2em;
+}
+.estatuto p{
+    text-align: left;
+    margin: 0 3em    
 }

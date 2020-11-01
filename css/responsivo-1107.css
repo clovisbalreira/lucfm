@@ -2,7 +2,7 @@
 
 @media(max-width: 1107px){
     body{
-        background-image: linear-gradient(90deg,var(--azul1),var(--azul0));
+        background-image: linear-gradient(90deg,var(--main1),var(--main0));
     }
 
     #logoEsquerda{
@@ -26,5 +26,15 @@
 
     #container{
         display: block;
+    }
+
+    .competicaoDireita{
+        float: none;
+        width: 100%;
+    }
+
+    .competicaoEsquerda{
+        display: block;
+        width: 100%;
     }
 }

@@ -1,12 +1,12 @@
 @charset "UTF-8";
 
 :root{
-    --verde0:#175B17;
-    --verde1:#4b9c4c;
-    --azul0:#03336C;
-    --azul1:#244d77;
-    --amarelo0: #fcf977;
-    --amarelo1:#fcfc00;
+    --body0:#175B17;
+    --body1:#4b9c4c;
+    --main0:#03336C;
+    --main1:#244d77;
+    --fundo0: #fcf977;
+    --fundo1:#fcfc00;
 }    
 
 *{
@@ -39,7 +39,7 @@ p{
 }
 
 body{
-    background-image: linear-gradient(30deg,var(--verde0),var(--verde1));
+    background-image: linear-gradient(30deg,var(--body0),var(--body1));
 }
 
 

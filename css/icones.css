@@ -9,8 +9,8 @@
     display: inline-flex;
     width: 45px;
     height: 45px;
-    background: var(--verde1);
-    color: var(--azul1);
+    background: var(--body1);
+    color: var(--main1);
     margin: 0 5px;
     border-radius: 50%;
     align-items: center;
@@ -19,7 +19,7 @@
 }
 
 #icones a:hover{
-    background: var(--azul1);
+    background: var(--main1);
 }
 
 

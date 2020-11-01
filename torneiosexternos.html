@@ -62,10 +62,15 @@
         </header>
         <main>
             <article class="fundoGrande postNoticias">
-                <h2>Atualizando....</h2>
-                <section  class="tabelasCampeonatos">
+                <h2>Competições</h2>
+<!--               <section  class="competicaoDireita">
+                    <div id="internoCampeonato"><h2>Campeonato</h2></div>
+                    <div id="internoCopa"><h2>Copa</h2></div>
+                </section>-->
+                <section  class="tabelasCampeonatos competicaoEsquerda">
                 </section>
             </article>
+        </main>
         </main>
         <footer>
             <article class="fundo">
@@ -75,12 +80,24 @@
                             <img src="imagem/facebook.png" alt="Facebook"></a>
                     <a href="https://www.instagram.com/lucfuteboldemesa/" target="_black">
                         <img src="imagem/instagram.png" alt="Instagram"></a>
-                    <a href="" target="_black">
+                    <a href="https://youtube.com/channel/UCgUSljcAdNybAbutKofIEXQ" target="_black">
                         <img src="imagem/youtube.png" alt="You tube"></a>
                         </div></h2>
                 </div>
             </article>
         </footer>
+        <script>
+            var grupos = [integracao1GrupoA,integracao1GrupoB,integracao1GrupoC,integracao1GrupoD];
+            var thead = criarClasse(grupos,"thead");
+            var tbody = criarClasse(grupos,"tbody");
+            var quantidade = grupos.length-1;            
+            function torneio(quantidade , grupos , thead , tbody){
+                for(var i = 0 ; i < quantidade ; i++ ){
+                    criarTabelaToda(grupos[i],thead[i],tbody[i],i ,quantidade,"º Grupo");
+                }
+            }
+            torneio(quantidade , grupos , thead , tbody);
+        </script>
         <script src="js/btnMenu.js"></script>
     </body>
 </html>

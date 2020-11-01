@@ -62,8 +62,12 @@
         </header>
         <main>
             <article class="fundoGrande postNoticias">
-                <h2>Campeonatos L.U.C.F.M. ( Liga Canoense de Futebol de Mesa )</h2>
-                <section  class="tabelasCampeonatos">
+                <h2>Competições</h2>
+<!--               <section  class="competicaoDireita">
+                    <div id="internoCampeonato"><h2>Campeonato</h2></div>
+                    <div id="internoCopa"><h2>Copa</h2></div>
+                </section>-->
+                <section  class="tabelasCampeonatos competicaoEsquerda">
                 </section>
             </article>
         </main>
@@ -87,10 +91,9 @@
             var tbody = criarClasse(campeonato,"tbody");
             var quantidade = campeonato.length-1;            
             for(var i = quantidade ; i >= 0 ; i-- ){
-                criarTabelaToda(campeonato[i],thead[i],tbody[i],i ,quantidade);
+                criarTabelaToda(campeonato[i],thead[i],tbody[i],i ,quantidade,"º Campeonato L.U.C.F.M.");
         }
         </script>
         <script src="js/btnMenu.js"></script>
-        <script src="js/escutarCampeonato.js"></script>
     </body>
 </html>

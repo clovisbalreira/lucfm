@@ -25,7 +25,6 @@
 }
 
 #home{
-    background-color: tomato;
     height: 3000px;
 }
 
@@ -41,7 +40,7 @@
 }
 
 #tabela , #noticia , .fundoGrande{
-    background-image: linear-gradient(30deg,var(--amarelo0),var(--amarelo1));
+    background-image: linear-gradient(30deg,var(--fundo0),var(--fundo1));
     border-radius: 20px;
     box-shadow: 4px 4px rgba(0, 0, 0, 0.575);
     padding: 1em 0em;
@@ -58,5 +57,9 @@
 
 #container{
     display: none;
+}
+
+#internoCampeonato{
+    margin-top: 2em;
 }
 

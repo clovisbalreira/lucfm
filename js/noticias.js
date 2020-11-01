@@ -7,22 +7,12 @@ function atualizacaoPost(titulo , fotoBlog , paragrafo,i){
     var picture = document.createElement("picture");
 
     img.classList.add("fotoBlog");
-    img.getAttribute("img");
-    img.setAttribute("src","imagem/blog/"+fotoBlog)
+    img.getAttribute("src");
+    img.setAttribute("src","imagem/Home/"+fotoBlog)
     img.getAttribute("alt")
     img.setAttribute("alt", "L.U.C.F.M");
     
-    if(i != "U"){
-        var source = document.createElement("source");
-        source.getAttribute("media");
-        source.setAttribute("media","(max-width: 800px");
-        source.getAttribute("srcset");
-        source.setAttribute("srcset","imagem/home/"+fotoBlog)
-        picture.appendChild(source);
-    }else{
-        img.setAttribute("src","imagem/Home/"+fotoBlog)
-        h2.classList.add("postHome");
-    }
+    source(i , fotoBlog , picture , img , h2);
 
     h2.textContent = titulo;
     p.textContent = paragrafo;
@@ -40,5 +30,19 @@ function atualizacaoPost(titulo , fotoBlog , paragrafo,i){
 function condicaoHr(i , article , hr){
     if(i == 0){
         article.appendChild(hr);
+    }
+}
+
+function source(i , fotoBlog , picture , img , h2){
+    if(i != "U"){
+        img.setAttribute("src","imagem/blog/"+fotoBlog)
+        var source = document.createElement("source");
+        source.getAttribute("media");
+        source.setAttribute("media","(max-width: 800px");
+        source.getAttribute("srcset");
+        source.setAttribute("srcset","imagem/home/"+fotoBlog)
+        picture.appendChild(source);
+    }else{
+        h2.classList.add("postHome");
     }
 }

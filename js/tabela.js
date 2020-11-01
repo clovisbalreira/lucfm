@@ -1,4 +1,4 @@
-function criarTabelaToda(campeonato ,head, body,i ,quantidade){
+function criarTabelaToda(campeonato ,head, body,i ,quantidade , nome){
     var classeTabela = "table";
     var classeTbody = body;
     var classeThead = head;
@@ -12,7 +12,7 @@ function criarTabelaToda(campeonato ,head, body,i ,quantidade){
     var campanha = ["COL.","Tecnico","PG","J","V","E","D","GP","GC","SG","%"];
 
     tabela.classList.add(classeTabela)
-    caption.textContent = (i+1)+"º Campeonato L.U.C.F.M.";
+    caption.textContent = (i+1)+nome;
     tabela.appendChild(caption);
     tabela.appendChild(thead);
     thead.classList.add(classeThead);
