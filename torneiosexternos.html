@@ -17,7 +17,7 @@
         <link rel="stylesheet" href="css/responsivo-1107.css" type="text/css">
         <link rel="stylesheet" href="css/responsivo-530.css" type="text/css">
         <link rel="stylesheet" href="css/menu.css" type="text/css">
-        <script src="js/campeonato.js"></script>
+        <script src="js/integracao.js"></script>
         <script src="js/tabela.js"></script>
     </head>
     <body>
@@ -32,7 +32,7 @@
                     <li class="menuItem"><a href="torneiosexternos.html" class="menuItemAcao">Torneios Integração</a></li>
                     <li class="menuItem"><a href="ranking.html" class="menuItemAcao">Ranking</a></li>
                     <li class="menuItem"><a href="estatuto.html" class="menuItemAcao">Estatuto L.U.C.F.M.</a></li>
-                    <li class="menuItem"><a href="contado.html" class="menuItemAcao">Contado</a></li>
+                    <!--<li class="menuItem"><a href="contado.html" class="menuItemAcao">Contado</a></li>-->
                 </ul>
             </nav>
         <section class="fundo">
@@ -55,7 +55,7 @@
                         <li><a href="torneiosexternos.html">Torneios Integração</a></li>
                         <li><a href="ranking.html">Ranking</a></li>
                         <li><a href="estatuto.html">Estatuto L.U.C.F.M.</a></li>
-                        <li><a href="contado.html">Contado</a></li>
+                        <!--<li><a href="contado.html">Contado</a></li>-->
                     </ul>
                 </nav>
             </section>
@@ -67,7 +67,7 @@
                     <div id="internoCampeonato"><h2>Campeonato</h2></div>
                     <div id="internoCopa"><h2>Copa</h2></div>
                 </section>-->
-                <section  class="tabelasCampeonatos competicaoEsquerda">
+                <section  class="tabelasCampeonatos competicaoEsquerda tabela-grupo">
                 </section>
             </article>
         </main>
@@ -87,16 +87,34 @@
             </article>
         </footer>
         <script>
-            var grupos = [integracao1GrupoA,integracao1GrupoB,integracao1GrupoC,integracao1GrupoD];
-            var thead = criarClasse(grupos,"thead");
-            var tbody = criarClasse(grupos,"tbody");
-            var quantidade = grupos.length-1;            
-            function torneio(quantidade , grupos , thead , tbody){
-                for(var i = 0 ; i < quantidade ; i++ ){
-                    criarTabelaToda(grupos[i],thead[i],tbody[i],i ,quantidade,"º Grupo");
-                }
-            }
-            torneio(quantidade , grupos , thead , tbody);
+            var soma = 0;
+            var fasesTorneioIntegracao4 = ["1º Taça Cidade de Canoas de Futebol de Mesa","Quartas de final - Bronze","Quartas de final - Ouro","Semi Final - Bronze","Semi Final - Prata","Semi Final - Ouro","3º Lugar - Bronze","3º Lugar - Prata","3º Lugar - Ouro","Final - Bronze","Final - Prata","Final - Ouro"];
+            var grupoIntegracao4 = [integracao4GrupoA,integracao4GrupoB,integracao4GrupoC,integracao4GrupoD,integracao4GrupoE];
+            var eliminatorioIntegracao4 = [integracao4QuartasfinalBronze,integracao4QuartasfinalOuro,integracao4SemifinalBronze,integracao4SemifinalPrata,integracao4SemifinalOuro,integracao43lugarBronze,integracao43lugarPrata,integracao43lugarOuro,integracao4finalBronze,integracao4finalPrata,integracao4finalOuro];            
+            copa(grupoIntegracao4,fasesTorneioIntegracao4,eliminatorioIntegracao4,soma);
+            soma = soma + grupoIntegracao4.length; 
+            escreverHr()
+
+            var fasestorneioIntegracao3 = ["L.U.C.F.M. World Cup Canoas 2018","Quartas de final","Semi Final","3º Lugar","Final"];
+            var grupoIntegracao3 = [integracao3GrupoA,integracao3GrupoB,integracao3GrupoC,integracao3GrupoD];
+            var eliminatorioIntegracao3 = [integracao3Quartasfinal,integracao3Semifinal,integracao33lugar,integracao3final,];
+            copa(grupoIntegracao3,fasestorneioIntegracao3,eliminatorioIntegracao3,soma);
+            soma = soma + grupoIntegracao3.length; 
+            escreverHr()
+            
+            var fasestorneioIntegracao2 = ["2º Torneio Integração","Quartas de final","Semi Final - Prata","Semi Final - Ouro","3º Lugar - Prata","3º Lugar - Ouro","Final - Prata","Final - Ouro"];
+            var grupoIntegracao2 = [integracao2GrupoA,integracao2GrupoB,integracao2GrupoC,integracao2GrupoD];
+            var eliminatorioIntegracao2 = [integracao2Quartasfinal,integracao2SemifinalPrata,integracao2SemifinalOuro,integracao23lugarPrata,integracao23lugarOuro,integracao2finalPrata,integracao2finalOuro];
+            copa(grupoIntegracao2,fasestorneioIntegracao2,eliminatorioIntegracao2,soma);
+            soma = soma + grupoIntegracao2.length; 
+            escreverHr()
+            
+            var fasestorneioIntegracao1 = ["1º Torneio Integração","Semi Final - Bronze","Semi Final - Prata","Semi Final - Ouro","3º Lugar - Bronze","3º Lugar - Prata","3º Lugar - Ouro","Final - Bronze","Final - Prata","Final - Ouro"];
+            var grupoIntegracao1 = [integracao1GrupoA,integracao1GrupoB,integracao1GrupoC,integracao1GrupoD];
+            var eliminatorioIntegracao1 = [integracao1SemifinalBronze,integracao1SemifinalPrata,integracao1SemifinalOuro,integracao13lugarBronze,integracao13lugarPrata,integracao13lugarOuro,integracao1finalBronze,integracao1finalPrata,integracao1finalOuro];
+            copa(grupoIntegracao1,fasestorneioIntegracao1,eliminatorioIntegracao1,soma);
+            soma = soma + grupoIntegracao1.length; 
+            
         </script>
         <script src="js/btnMenu.js"></script>
     </body>

@@ -9,20 +9,33 @@ function criarTabelaToda(campeonato ,head, body,i ,quantidade , nome){
     var tr = document.createElement("tr");
     var th = "";
     var tbody = document.createElement("tbody");
-    var campanha = ["COL.","Tecnico","PG","J","V","E","D","GP","GC","SG","%"];
-
+    var campanha = "";
+    var grupo = ["A","B","C","D","E","F","G","H"];
     tabela.classList.add(classeTabela)
-    caption.textContent = (i+1)+nome;
+    
+    campanha = grupos(nome,campanha,caption,grupo,i);
+
     tabela.appendChild(caption);
     tabela.appendChild(thead);
     thead.classList.add(classeThead);
     thead.appendChild(tr);
-    criarTh(campanha , th , tr);
     tbody.classList.add(classeTbody);
+    criarTh(campanha , th , tr);
     esconderClasse(quantidade , i , thead , tbody);
     tabela.appendChild(tbody);
     secao.appendChild(tabela);
     comeco(campeonato  , "."+classeTbody) 
+}
+
+function grupos(nome,campanha,caption,grupo,i){
+    if(nome == "Grupo"){
+        campanha = ["COL.","Associação","Tecnico","PG","J","V","E","D","GP","GC","SG"];
+        caption.textContent = nome+" "+(grupo[i]);
+    }else{
+        campanha = ["COL.","Tecnico","PG","J","V","E","D","GP","GC","SG","%"];
+        caption.textContent = (i+1)+nome;
+    }     
+    return campanha;
 }
 
 function esconderClasse(quantidade , i , thead , tbody){
@@ -166,4 +179,100 @@ function criarTdAutomatico(tr , campeonato ,td , contagem , tbody){
         tbody.appendChild(tr);
     }
     return tbody;
+}
+
+function grupo(grupos,nome,soma){
+    var secao = document.querySelector(".tabelasCampeonatos")
+    var h2 = document.createElement("h2");
+    h2.textContent = nome;
+    secao.appendChild(h2);
+    var thead = criarClasse(grupos,"thead"+soma);
+    var tbody = criarClasse(grupos,"tbody"+soma);
+    var quantidade = grupos.length-1;            
+
+    for(var i = 0 ; i <= quantidade ; i++ ){
+        criarTabelaToda(grupos[i],thead[i],tbody[i],i ,quantidade,"Grupo");
+    }
+}
+
+function eliminatorio(eliminatorios,fase ,body,head){
+
+    var classeTabela = "table-eliminatorio";
+    var classeTbody = body;
+    var classeThead = head;
+    var secao = document.querySelector(".tabelasCampeonatos");
+    var tabela = document.createElement("table"); 
+    var caption = document.createElement("caption"); 
+    var thead = document.createElement("thead");   
+    var tr = document.createElement("tr");
+    var th = "";
+    var tbody = document.createElement("tbody");
+    tabela.appendChild(caption)
+    secao.appendChild(tabela)
+
+    tabela.classList.add(classeTabela);
+
+    var thTextos = ["Associação","Tecnico","Gols"]
+    caption.textContent = fase;
+    criarThEliminatorio(thTextos , th , tr);
+ 
+    tabela.appendChild(caption);
+    tabela.appendChild(thead);
+    thead.classList.add(classeThead);
+    thead.appendChild(tr);
+    tbody.classList.add(classeTbody);
+    var trs = "";
+
+    jogosEliminatorios(eliminatorios , trs , th , tbody)
+    
+    tabela.appendChild(tbody);
+    secao.appendChild(tabela);
+}
+
+function criarThEliminatorio(thTextos , th , tr){
+    for(var i = 0 ; i < 5 ; i++){
+        th = document.createElement("th");
+        if(i == 0 || i == 4){
+            th.textContent = thTextos[0];
+        }else if(i == 1 || i == 3){
+            th.textContent = thTextos[1];
+        }else{
+            th.textContent = thTextos[2];
+            th.getAttribute("colspan");
+            th.setAttribute("colspan",3);            
+        }
+        tr.appendChild(th)
+    }
+    return tr;
+}
+
+function jogosEliminatorios(eliminatorios , trs , th , tbody) {
+    for(var l = 0 ; l < eliminatorios.length ; l++){
+        trs = document.createElement("tr");
+        for(var c = 0 ; c < eliminatorios[l].length; c++){
+            if(c == 3){
+                th = document.createElement("td");
+                th.textContent = "X";
+                trs.appendChild(th);
+            }
+        th = document.createElement("td");
+        th.textContent = eliminatorios[l][c];
+        trs.appendChild(th);
+        }
+        tbody.appendChild(trs);
+    }  
+}
+
+function copa(grupos,fases,eliminatorioIntegracao4,quantidade){
+    grupo(grupos,fases[0],quantidade);
+    for(var i = 0 ; i < eliminatorioIntegracao4.length ; i++){
+        eliminatorio(eliminatorioIntegracao4[i],fases[i+1],"thead","tbody");
+    }
+}
+        
+
+function escreverHr(){
+    var secao = document.querySelector(".tabelasCampeonatos");
+    var hr = document.createElement("hr");
+    secao.appendChild(hr);
 }
