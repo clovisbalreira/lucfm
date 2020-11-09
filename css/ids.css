@@ -46,13 +46,12 @@
     padding: 1em 0em;
 }
 
-#postNoticias{
-    padding: 1em;
+#noticia h2 , #noticia p{
     text-align: center;
 }
 
-#noticia h2 , #noticia p{
-    text-align: center;
+#noticia h2 {
+    margin-top: 1em;
 }
 
 #container{

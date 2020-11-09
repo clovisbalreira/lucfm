@@ -32,3 +32,14 @@ tbody{
     background-image: linear-gradient(90deg,var(--body0),var(--body1));
 }
 
+td img{
+    width: 50px;
+}
+
+.copalucfm .table-eliminatorio th:nth-child(1),.copalucfm .table-eliminatorio th:nth-child(5),.copalucfm .table-eliminatorio td:nth-child(1),.copalucfm .table-eliminatorio td:nth-child(7){
+    background-color: brown;
+    display: none;
+}
+
+
+

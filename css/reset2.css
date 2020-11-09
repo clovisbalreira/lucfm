@@ -3,10 +3,10 @@
 :root{
     --body0:#175B17;
     --body1:#4b9c4c;
-    --main0:#03336C;
-    --main1:#244d77;
-    --fundo0: #fcf977;
-    --fundo1:#fcfc00;
+    --fundo0:#03336C;
+    --fundo1:#244d77;
+    --main0: #fcf977;
+    --main1:#fcfc00;
 }    
 
 *{
@@ -43,7 +43,7 @@ body{
 }
 
 .btnMenuOpen{
-    background-image: url(../imagem/hamburger.png);
+    background-image: url(../imagem/hamburgerAzul.png);
 }
 
 .btnMenuClose{

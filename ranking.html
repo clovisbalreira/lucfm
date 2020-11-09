@@ -32,7 +32,7 @@
                     <li class="menuItem"><a href="torneiosexternos.html" class="menuItemAcao">Torneios Integração</a></li>
                     <li class="menuItem"><a href="ranking.html" class="menuItemAcao">Ranking</a></li>
                     <li class="menuItem"><a href="estatuto.html" class="menuItemAcao">Estatuto L.U.C.F.M.</a></li>
-                    <!--<li class="menuItem"><a href="contado.html" class="menuItemAcao">Contado</a></li>-->
+                    <li class="menuItem"><a href="modelo1.html" class="menuItemAcao">Contado</a></li>-->
                 </ul>
             </nav>
         <section class="fundo">
@@ -55,15 +55,21 @@
                         <li><a href="torneiosexternos.html">Torneios Integração</a></li>
                         <li><a href="ranking.html">Ranking</a></li>
                         <li><a href="estatuto.html">Estatuto L.U.C.F.M.</a></li>
-                        <!--<li><a href="contado.html">Contado</a></li>-->
+                        <li><a href="modelo1.html">Modelos</a></li>
                     </ul>
                 </nav>
             </section>
         </header>
         <main>
-            <article class="fundoGrande postNoticias">
-                <h2>Atualizando....</h2>
-                <section  class="tabelasCampeonatos">
+            <article class="fundoGrande postRanking">
+                <h2>Ranking L.U.C.F.M. ( liga união canoense de futebol de mesa )</h2>
+                <p>A <strong>L.U.C.F.M.</strong> tem dois tipos de ranking :</p>
+                <p><strong>Ranking histórico:</strong> somatório de pontos desde a data de fundação.</p>
+                <p><strong>Ranking atualizado:</strong> somatório de pontos das três últimas competições.</p>
+                <p><a href="estatuto.html#localizarRegra">Mais Informações</a></p>
+                <section  class="rankingDireita">
+                </section>
+                <section  class="tabelasCampeonatos rankingEsquerda">
                 </section>
             </article>
         </main>
@@ -81,6 +87,89 @@
                 </div>
             </article>
         </footer>
+        <script>
+            var nomeRanking = "Ranking Total"
+            var nomeRankingAtualizado = "Ranking Historico"
+            var pontos1 = [30,26,22,18,16,14,12,10,8,6,4,2,0,0,0,0];
+            var pontos2 = [15,13,11,9,8,7,6,5,4,3,2,1,0,0,0,0];
+//////////////////////////////////////////////////////////////////////////////
+            var tecnicos = [{colocacao : 0 , nome : "Ademar", pontos : "0"},
+                            {colocacao : 0 , nome : "Alessandro", pontos : "0"},
+                            {colocacao : 0 , nome : "Cadu", pontos : "0"},
+                            {colocacao : 0 , nome : "Cesar", pontos : "0"},
+                            {colocacao : 0 , nome : "Claudio", pontos : "0"},
+                            {colocacao : 0 , nome : "Clovis", pontos : "0"},
+                            {colocacao : 0 , nome : "Daniel", pontos : "0"},
+                            {colocacao : 0 , nome : "Diogo", pontos : "0"},
+                            {colocacao : 0 , nome : "Dirceu", pontos : "0"},
+                            {colocacao : 0 , nome : "Ernesto", pontos : "0"},
+                            {colocacao : 0 , nome : "Fabio", pontos : "0"},
+                            {colocacao : 0 , nome : "Fernando", pontos : "0"},
+                            {colocacao : 0 , nome : "Jamur", pontos : "0"},
+                            {colocacao : 0 , nome : "Marcelo", pontos : "0"},
+                            {colocacao : 0 , nome : "Motta", pontos : "0"},
+                            {colocacao : 0 , nome : "Oswaldo", pontos : "0"},
+                            {colocacao : 0 , nome : "Paulo Marcos", pontos : "0"},
+                            {colocacao : 0 , nome : "Paulo Renato", pontos : "0"},
+                            {colocacao : 0 , nome : "Paulo Ricardo", pontos : "0"},
+                            {colocacao : 0 , nome : "Polegar", pontos : "0"},
+                            {colocacao : 0 , nome : "Rafael", pontos : "0"},
+                            {colocacao : 0 , nome : "Rafael Pereira", pontos : "0"},
+                            {colocacao : 0 , nome : "Victor", pontos : "0"}];
+            var campeonato = [campeonato1,campeonato2,campeonato3,campeonato4,campeonato5,campeonato6,campeonato7,campeonato8,campeonatoA];
+            var copa = [copa1];
+            ranking(tecnicos,campeonato,pontos1);
+            ranking(tecnicos,copa,pontos2);
+            tecnicos.sort((a , b)=>{
+                if(a.pontos < b.pontos){
+                    return 1;
+                }
+                if(a.pontos >  b.pontos){
+                    return -1;
+                }
+                return 0;
+            });
+            mostraRanking("tbody" , "thead" , ".rankingDireita" , nomeRanking , tecnicos);
+//////////////////////////////////////////////////////////
+                var tecnicos = [{colocacao : 0 , nome : "Ademar", pontos : "0"},
+                                {colocacao : 0 , nome : "Alessandro", pontos : "0"},
+                                {colocacao : 0 , nome : "Cadu", pontos : "0"},
+                                {colocacao : 0 , nome : "Cesar", pontos : "0"},
+                                {colocacao : 0 , nome : "Claudio", pontos : "0"},
+                                {colocacao : 0 , nome : "Clovis", pontos : "0"},
+                                {colocacao : 0 , nome : "Daniel", pontos : "0"},
+                                {colocacao : 0 , nome : "Diogo", pontos : "0"},
+                                {colocacao : 0 , nome : "Dirceu", pontos : "0"},
+                                {colocacao : 0 , nome : "Ernesto", pontos : "0"},
+                                {colocacao : 0 , nome : "Fabio", pontos : "0"},
+                                {colocacao : 0 , nome : "Fernando", pontos : "0"},
+                                {colocacao : 0 , nome : "Jamur", pontos : "0"},
+                                {colocacao : 0 , nome : "Marcelo", pontos : "0"},
+                                {colocacao : 0 , nome : "Motta", pontos : "0"},
+                                {colocacao : 0 , nome : "Oswaldo", pontos : "0"},
+                                {colocacao : 0 , nome : "Paulo Marcos", pontos : "0"},
+                                {colocacao : 0 , nome : "Paulo Renato", pontos : "0"},
+                                {colocacao : 0 , nome : "Paulo Ricardo", pontos : "0"},
+                                {colocacao : 0 , nome : "Polegar", pontos : "0"},
+                                {colocacao : 0 , nome : "Rafael", pontos : "0"},
+                                {colocacao : 0 , nome : "Rafael Pereira", pontos : "0"},
+                                {colocacao : 0 , nome : "Victor", pontos : "0"}];
+            var campeonato = [campeonato7,campeonato8,campeonatoA];
+            var copa = [copa1];
+            ranking(tecnicos,campeonato,pontos1);
+            ranking(tecnicos,copa,pontos2);
+            tecnicos.sort((a , b)=>{
+                if(a.pontos < b.pontos){
+                    return 1;
+                }
+                if(a.pontos >  b.pontos){
+                    return -1;
+                }
+                return 0;
+            });
+
+            mostraRanking("tbody" , "thead" , ".rankingEsquerda" , nomeRankingAtualizado , tecnicos);
+        </script>
         <script src="js/btnMenu.js"></script>
     </body>
 </html>

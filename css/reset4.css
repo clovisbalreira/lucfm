@@ -1,12 +1,12 @@
 @charset "UTF-8";
 
 :root{
-    --body0:#175B17;
-    --body1:#4b9c4c;
-    --main0:#03336C;
-    --main1:#244d77;
-    --fundo0: #fcf977;
-    --fundo1:#fcfc00;
+    --fundo0:#175B17;
+    --fundo1:#4b9c4c;
+    --body0:#03336C;
+    --body1:#244d77;
+    --main0: #fcf977;
+    --main1:#fcfc00;
 }    
 
 *{
@@ -43,11 +43,11 @@ body{
 }
 
 .btnMenuOpen{
-    background-image: url(../imagem/hamburger.png);
+    background-image: url(../imagem/hamburgerSair.png);
 }
 
 .btnMenuClose{
     background-color: silver;
-    background-image: url(../imagem/hamburgerSair.png);
+    background-image: url(../imagem/hamburgerAzul.png);
 }
 

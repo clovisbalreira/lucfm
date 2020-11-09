@@ -32,7 +32,7 @@
                     <li class="menuItem"><a href="torneiosexternos.html" class="menuItemAcao">Torneios Integração</a></li>
                     <li class="menuItem"><a href="ranking.html" class="menuItemAcao">Ranking</a></li>
                     <li class="menuItem"><a href="estatuto.html" class="menuItemAcao">Estatuto L.U.C.F.M.</a></li>
-                    <!--<li class="menuItem"><a href="contado.html" class="menuItemAcao">Contado</a></li>-->
+                    <li class="menuItem"><a href="modelo1.html" class="menuItemAcao">Contado</a></li>-->
                 </ul>
             </nav>
         <section class="fundo">
@@ -55,7 +55,7 @@
                         <li><a href="torneiosexternos.html">Torneios Integração</a></li>
                         <li><a href="ranking.html">Ranking</a></li>
                         <li><a href="estatuto.html">Estatuto L.U.C.F.M.</a></li>
-                        <!--<li><a href="contado.html">Contado</a></li>-->
+                        <li><a href="modelo1.html">Modelos</a></li>
                     </ul>
                 </nav>
             </section>
@@ -67,7 +67,7 @@
                     <div id="internoCampeonato"><h2>Campeonato</h2></div>
                     <div id="internoCopa"><h2>Copa</h2></div>
                 </section>-->
-                <section  class="tabelasCampeonatos competicaoEsquerda">
+                <section  class="tabelasCampeonatos competicaoEsquerda copalucfm">
                 </section>
             </article>
         </main>
@@ -86,6 +86,7 @@
             </article>
         </footer>
         <script>
+
             var campeonato = [campeonato1,campeonato2,campeonato3,campeonato4,campeonato5,campeonato6,campeonato7,campeonato8,campeonatoA];
             var thead = criarClasse(campeonato,"thead");
             var tbody = criarClasse(campeonato,"tbody");
@@ -93,6 +94,23 @@
             for(var i = quantidade ; i >= 0 ; i-- ){
                 criarTabelaToda(campeonato[i],thead[i],tbody[i],i ,quantidade,"º Campeonato L.U.C.F.M.");
             }
+
+            var copa1 = [copa1OitavasdeFinal1,copa1OitavasdeFinal2,copa1QuartasdeFinal1,copa1QuartasdeFinal2,copa1SemiFinal1,copa1SemiFinal2,copa1Final1,copa1Final2];
+            var fases = ["1º Copa L.U.C.FM.","Oitavas de Final ( 1º Jogo )","Oitavas de Final ( 2º Jogo )","Quartas de Final ( 1º Jogo )","Quartas de Final ( 2º Jogo )","Semi Final ( 1º Jogo )","Semi Final ( 2º Jogo )","Final ( 1º Jogo )","Final ( 2º Jogo )"];
+
+
+            escreverHr();
+            for(var i = 0 ; i < copa1.length ; i++){
+                if(i == 0){
+                    var secao = document.querySelector(".tabelasCampeonatos");
+                    var h2 = document.createElement("h2");
+                    h2.textContent = fases[i];
+                    secao.appendChild(h2);                    
+                }
+                eliminatorio(copa1[i],fases[i+1],thead,tbody);
+            }
+
+            
         </script>
         <script src="js/btnMenu.js"></script>
     </body>

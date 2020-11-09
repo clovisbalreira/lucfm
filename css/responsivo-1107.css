@@ -37,4 +37,23 @@
         display: block;
         width: 100%;
     }
+    .rankingEsquerda , .rankingDireita{
+        display: block;
+        width: 100%;
+    }
+
+    .rankingEsquerda{
+        float: none;
+    }
+    
+    .postRanking h2{
+        text-align: center;
+        padding-left: 1em;
+    }
+    
+    .postRanking p {
+        text-align: left;
+        padding-left: 1em;
+    }
+    
 }

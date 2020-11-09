@@ -116,9 +116,14 @@ function colocacao(i , contagem , td , tr){
 }
 
 function criarTd(td , campeonato , contagem , i , tr){
-    td = (document.createElement('td'));
-    td.textContent = campeonato[contagem][i];
-    tr.appendChild(td);
+    var img ="";
+    if(i == 0 && campeonato[contagem][i].substr(campeonato[contagem][i].length - 3, campeonato[contagem][i].length) == "png"){
+        logoCompeticao(img , campeonato , contagem , i , td , tr)
+    }else{
+        td = (document.createElement('td'));
+        td.textContent = campeonato[contagem][i];
+        tr.appendChild(td);
+    }
 }
 
 function paginas(){
@@ -154,16 +159,16 @@ function criarTabelaAutomatica(campeonato , col){
     var campanha = ["COL.","Tecnico","PG","J","V","E","D","GP","GC","SG","%"];
     var contagem = 0;
     var tb = "";
-
-        tbody.classList.add("home");
-        caption.textContent = col+"º Campeonato L.U.C.F.M.";
-        tabela.appendChild(caption);   
-        tabela.appendChild(thead);
-        thead.appendChild(tr);
-        criarTh(campanha , th , tr);
-        tb = criarTdAutomatico(tr , campeonato ,td , contagem , tbody); 
-        tabela.appendChild(tb);   
-        secao.appendChild(tabela)
+    tabela.classList.add("table")
+    tbody.classList.add("home");
+    caption.textContent = col+"º Campeonato L.U.C.F.M.";
+    tabela.appendChild(caption);   
+    tabela.appendChild(thead);
+    thead.appendChild(tr);
+    criarTh(campanha , th , tr);
+    tb = criarTdAutomatico(tr , campeonato ,td , contagem , tbody); 
+    tabela.appendChild(tb);   
+    secao.appendChild(tabela)
 }
 
 function criarTdAutomatico(tr , campeonato ,td , contagem , tbody){
@@ -195,7 +200,7 @@ function grupo(grupos,nome,soma){
     }
 }
 
-function eliminatorio(eliminatorios,fase ,body,head){
+function eliminatorio(eliminatorios,fase ,head,body){
 
     var classeTabela = "table-eliminatorio";
     var classeTbody = body;
@@ -207,6 +212,7 @@ function eliminatorio(eliminatorios,fase ,body,head){
     var tr = document.createElement("tr");
     var th = "";
     var tbody = document.createElement("tbody");
+    var img = "";
     tabela.appendChild(caption)
     secao.appendChild(tabela)
 
@@ -223,7 +229,7 @@ function eliminatorio(eliminatorios,fase ,body,head){
     tbody.classList.add(classeTbody);
     var trs = "";
 
-    jogosEliminatorios(eliminatorios , trs , th , tbody)
+    jogosEliminatorios(eliminatorios , trs , th , tbody , img)
     
     tabela.appendChild(tbody);
     secao.appendChild(tabela);
@@ -246,30 +252,112 @@ function criarThEliminatorio(thTextos , th , tr){
     return tr;
 }
 
-function jogosEliminatorios(eliminatorios , trs , th , tbody) {
+function jogosEliminatorios(eliminatorios , trs , th , tbody , img) {
     for(var l = 0 ; l < eliminatorios.length ; l++){
         trs = document.createElement("tr");
         for(var c = 0 ; c < eliminatorios[l].length; c++){
-            if(c == 3){
-                th = document.createElement("td");
-                th.textContent = "X";
-                trs.appendChild(th);
+            if(c == 5){
+                logoCompeticao(img , eliminatorios , l , c , th , trs);
+            }else if(c == 3){
+                dadosEliminatorios( th , eliminatorios , l , c , trs);
+            }else if(c == 0){
+                logoCompeticao(img , eliminatorios , l , c , th , trs);
+            }else{
+                dadosEliminatorios( th , eliminatorios , l , c , trs);
             }
-        th = document.createElement("td");
-        th.textContent = eliminatorios[l][c];
-        trs.appendChild(th);
         }
         tbody.appendChild(trs);
     }  
 }
 
-function copa(grupos,fases,eliminatorioIntegracao4,quantidade){
+function logoCompeticao(img , eliminatorios , l , c , th , trs){
+    img = document.createElement("img");
+    img.getAttribute('src');
+    img.setAttribute('src','imagem/associacao/'+eliminatorios[l][c])
+    th = document.createElement("td");
+    th.appendChild(img);
+    trs.appendChild(th);
+}
+
+function dadosEliminatorios( th , eliminatorios , l , c , trs){
+    th = document.createElement("td");
+    if(c == 3){
+        th.textContent = "X";
+        trs.appendChild(th);
+        th = document.createElement("td");
+    }
+    th.textContent = eliminatorios[l][c];
+    trs.appendChild(th);
+}
+
+function copa(grupos,fases,eliminatorioIntegracao,quantidade){
     grupo(grupos,fases[0],quantidade);
-    for(var i = 0 ; i < eliminatorioIntegracao4.length ; i++){
-        eliminatorio(eliminatorioIntegracao4[i],fases[i+1],"thead","tbody");
+    for(var i = 0 ; i < eliminatorioIntegracao.length ; i++){
+        eliminatorio(eliminatorioIntegracao[i],fases[i+1],"thead","tbody");
     }
 }
         
+function ranking(tecnicos,campeonato,ponto){
+    for(var t = 0 ; t < tecnicos.length ; t++){
+        for(var l = 0 ; l < campeonato.length ; l++){
+            for(var c = 0 ; c < campeonato[l].length ; c++){
+                if(tecnicos[t].nome == campeonato[l][c][0]){
+                    tecnicos[t].pontos = parseInt(tecnicos[t].pontos) + parseInt(ponto[c])
+                }
+            }
+        }
+    }
+}
+
+function mostraRanking(body , head , classe , fase , tecnicos){
+    var classeTabela = "table-ranking";
+    var classeTbody = body;
+    var classeThead = head;
+    var secao = document.querySelector(classe);
+    var tabela = document.createElement("table"); 
+    var caption = document.createElement("caption"); 
+    var thead = document.createElement("thead");   
+    var tr = document.createElement("tr");
+    var th = "";
+    var tbody = document.createElement("tbody");
+    tabela.appendChild(caption)
+    var campanha = ["COL.","Tecnicos","Pontos"];
+    
+    criarTh(campanha , th , tr);
+
+    tabela.classList.add(classeTabela);
+
+    caption.textContent = fase;
+ 
+    tabela.appendChild(caption);
+    tabela.appendChild(thead);
+    thead.classList.add(classeThead);
+    thead.appendChild(tr);
+    tbody.classList.add(classeTbody);
+    var trs = "";
+    linhaRanking(trs , th , tbody , tecnicos)
+    
+    tabela.appendChild(tbody);
+    secao.appendChild(tabela);
+}
+
+function linhaRanking(trs , td , tbody , tecnicos){
+    for(var i = 0 ; i < tecnicos.length ; i++){
+        if(tecnicos[i].pontos > 0 ){
+        trs = document.createElement("tr");
+        td = document.createElement('th');
+        td.textContent = (tecnicos[i].colocacao+1+i)+"º";
+        trs.appendChild(td);
+        td = document.createElement('td');
+        td.textContent = tecnicos[i].nome;
+        trs.appendChild(td);
+        td = document.createElement('td');
+        td.textContent = tecnicos[i].pontos;
+        trs.appendChild(td);
+        tbody.appendChild(trs);
+        }
+    }
+}
 
 function escreverHr(){
     var secao = document.querySelector(".tabelasCampeonatos");

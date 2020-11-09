@@ -1,10 +1,10 @@
 @charset "UTF-8";
 
 :root{
-    --body0:#175B17;
-    --body1:#4b9c4c;
-    --main0:#03336C;
-    --main1:#244d77;
+    --main0:#175B17;
+    --main1:#4b9c4c;
+    --body0:#03336C;
+    --body1:#244d77;
     --fundo0: #fcf977;
     --fundo1:#fcfc00;
 }    
@@ -48,6 +48,6 @@ body{
 
 .btnMenuClose{
     background-color: silver;
-    background-image: url(../imagem/hamburgerSair.png);
+    background-image: url(../imagem/hamburgerAzul.png);
 }
 
