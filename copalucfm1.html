@@ -42,7 +42,7 @@
                     <li class="menuItem"><a href="torneiosexternos.html" class="menuItemAcao">Torneios Integração</a></li>
                     <li class="menuItem"><a href="ranking.html" class="menuItemAcao">Ranking</a></li>
                     <li class="menuItem"><a href="estatuto.html" class="menuItemAcao">Estatuto L.U.C.F.M.</a></li>
-            </ul>
+                </ul>
             </nav>
         <section class="fundo">
                 <picture>
@@ -70,7 +70,7 @@
         </header>
         <main>
             <article class="fundoGrande postNoticias">
-                <section  class="competicaoDireitaInterno">
+                <section  class="competicaoDireita">
                     <nav id ="menuCampeonato" class="fundo fundoCampeonato">
                         <ul>
                             <li><a href="torneiosinternos.html">9º Campeonato L.U.C.F.M.</a></li>
@@ -86,7 +86,7 @@
                         </ul>
                     </nav>
                 </section>
-                <section  class="tabelasCampeonatos competicaoEsquerdaInterno">
+                <section  class="tabelasCampeonatos competicaoEsquerda copalucfm">
                 </section>
             </article>
         </main>
@@ -105,7 +105,18 @@
             </article>
         </footer>
         <script>
-                criarTabelaToda(campeonatoA,"thead","tbody",8 ,0,"º Campeonato L.U.C.F.M.");
+            var copa1 = [copa1OitavasdeFinal1,copa1OitavasdeFinal2,copa1QuartasdeFinal1,copa1QuartasdeFinal2,copa1SemiFinal1,copa1SemiFinal2,copa1Final1,copa1Final2];
+            var fases = ["1º Copa L.U.C.F.M.","Oitavas de Final (1ºJogo)","Oitavas de Final (2ºJogo)","Quartas de Final (1ºJogo)","Quartas de Final (2ºJogo)","Semi Final (1ºJogo)","Semi Final (2ºJogo)","Final (1ºJogo)","Final (2ºJogo)"];
+            for(var i = 0 ; i < copa1.length ; i++){
+                if(i == 0){
+                    var secao = document.querySelector(".tabelasCampeonatos");
+                    var h2 = document.createElement("h2");
+                    h2.textContent = fases[i];
+                    secao.appendChild(h2);                    
+                }
+                eliminatorio(copa1[i],fases[i+1],"thead","tbody");
+            }
+
         </script>
         <script src="js/btnMenu.js"></script>
     </body>

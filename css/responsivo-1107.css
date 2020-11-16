@@ -20,7 +20,7 @@
         margin-left: 1em;
     }
 
-    #menuNavegacao{
+    #menuNavegacao , #menuCampeonato{
         display: none;
     }
 
@@ -37,6 +37,12 @@
         display: block;
         width: 100%;
     }
+
+    .competicaoEsquerdaInterno{
+        float: none;
+        width: 100%;
+    }
+
     .rankingEsquerda , .rankingDireita{
         display: block;
         width: 100%;

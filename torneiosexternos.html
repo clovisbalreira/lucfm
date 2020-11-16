@@ -26,13 +26,18 @@
                 <a href="#menu" class="btnMenu btnMenuOpen">Menu</a>
                 <ul class="menuUl">
                     <li class="btnMenu btnMenuClose">Sair</li>
+                    <li class="menuItem"><a href="torneiosexternos.html" class="menuItemAcao">2º Taça Cidade de Canoas de Futebol de Mesa</a></li>
+                    <li class="menuItem"><a href="tacalibertadoreslucfm.html" class="menuItemAcao" >Taca Libertadores L.U.C.F.M.</a></li>
+                    <li class="menuItem"><a href="tacacidadedecanoasdefuteboldemesa.html" class="menuItemAcao">1º Taça Cidade de Canoas de Futebol de Mesa</a></li>
+                    <li class="menuItem"><a href="lucfmworldcupcanoas2018.html" class="menuItemAcao">L.U.C.F.M. World Cup Canoas 2018</a></li>
+                    <li class="menuItem"><a href="torneiointegracao2.html" class="menuItemAcao">2º Torneio Integração</a></li>
+                    <li class="menuItem"><a href="torneiointegracao1.html" class="menuItemAcao">1º Torneio Integração</a></li>
                     <li class="menuItem"><a href="index.html" class="menuItemAcao">Home</a></li>
                     <li class="menuItem"><a href="noticias.html" class="menuItemAcao">Noticias</a></li>
                     <li class="menuItem"><a href="torneiosinternos.html" class="menuItemAcao">Torneios Internos</a></li>
                     <li class="menuItem"><a href="torneiosexternos.html" class="menuItemAcao">Torneios Integração</a></li>
                     <li class="menuItem"><a href="ranking.html" class="menuItemAcao">Ranking</a></li>
                     <li class="menuItem"><a href="estatuto.html" class="menuItemAcao">Estatuto L.U.C.F.M.</a></li>
-                    <li class="menuItem"><a href="modelo1.html" class="menuItemAcao">Contado</a></li>-->
                 </ul>
             </nav>
         <section class="fundo">
@@ -55,18 +60,24 @@
                         <li><a href="torneiosexternos.html">Torneios Integração</a></li>
                         <li><a href="ranking.html">Ranking</a></li>
                         <li><a href="estatuto.html">Estatuto L.U.C.F.M.</a></li>
-                        <li><a href="modelo1.html">Modelos</a></li>
                     </ul>
                 </nav>
             </section>
         </header>
         <main>
             <article class="fundoGrande postNoticias">
-                <h2>Competições</h2>
-<!--               <section  class="competicaoDireita">
-                    <div id="internoCampeonato"><h2>Campeonato</h2></div>
-                    <div id="internoCopa"><h2>Copa</h2></div>
-                </section>-->
+                <section  class="competicaoDireita">
+                    <nav id ="menuCampeonato" class="fundo fundoCampeonato">
+                        <ul>
+                            <li><a href="torneiosexternos.html">2º Taça Cidade de Canoas de Futebol de Mesa</a></li>
+                            <li><a href="tacalibertadoreslucfm.html" >Taca Libertadores L.U.C.F.M.</a></li>
+                            <li><a href="tacacidadedecanoasdefuteboldemesa.html">1º Taça Cidade de Canoas de Futebol de Mesa</a></li>
+                            <li><a href="lucfmworldcupcanoas2018.html" >L.U.C.F.M. World Cup Canoas 2018</a></li>
+                            <li><a href="torneiointegracao2.html">2º Torneio Integração</a></li>
+                            <li><a href="torneiointegracao1.html">1º Torneio Integração</a></li>
+                         </ul>
+                    </nav>
+                </section>
                 <section  class="tabelasCampeonatos competicaoEsquerda tabela-grupo">
                 </section>
             </article>
@@ -80,41 +91,18 @@
                             <img src="imagem/facebook.png" alt="Facebook"></a>
                     <a href="https://www.instagram.com/lucfuteboldemesa/" target="_black">
                         <img src="imagem/instagram.png" alt="Instagram"></a>
-                    <a href="https://youtube.com/channel/UCgUSljcAdNybAbutKofIEXQ" target="_black">
-                        <img src="imagem/youtube.png" alt="You tube"></a>
-                        </div></h2>
+                    <!--<a href="https://youtube.com/channel/UCgUSljcAdNybAbutKofIEXQ" target="_black">
+                        <img src="imagem/youtube.png" alt="You tube"></a>-->
+                    </div></h2>
                 </div>
             </article>
         </footer>
         <script>
-            var soma = 0;
-            var fasesTorneioIntegracao4 = ["1º Taça Cidade de Canoas de Futebol de Mesa","Quartas de final - Bronze","Quartas de final - Ouro","Semi Final - Bronze","Semi Final - Prata","Semi Final - Ouro","3º Lugar - Bronze","3º Lugar - Prata","3º Lugar - Ouro","Final - Bronze","Final - Prata","Final - Ouro"];
-            var grupoIntegracao4 = [integracao4GrupoA,integracao4GrupoB,integracao4GrupoC,integracao4GrupoD,integracao4GrupoE];
-            var eliminatorioIntegracao4 = [integracao4QuartasfinalBronze,integracao4QuartasfinalOuro,integracao4SemifinalBronze,integracao4SemifinalPrata,integracao4SemifinalOuro,integracao43lugarBronze,integracao43lugarPrata,integracao43lugarOuro,integracao4finalBronze,integracao4finalPrata,integracao4finalOuro];            
-            copa(grupoIntegracao4,fasesTorneioIntegracao4,eliminatorioIntegracao4,soma);
-            soma = soma + grupoIntegracao4.length; 
-            escreverHr()
-
-            var fasestorneioIntegracao3 = ["L.U.C.F.M. World Cup Canoas 2018","Quartas de final","Semi Final","3º Lugar","Final"];
-            var grupoIntegracao3 = [integracao3GrupoA,integracao3GrupoB,integracao3GrupoC,integracao3GrupoD];
-            var eliminatorioIntegracao3 = [integracao3Quartasfinal,integracao3Semifinal,integracao33lugar,integracao3final,];
-            copa(grupoIntegracao3,fasestorneioIntegracao3,eliminatorioIntegracao3,soma);
-            soma = soma + grupoIntegracao3.length; 
-            escreverHr()
-            
-            var fasestorneioIntegracao2 = ["2º Torneio Integração","Quartas de final","Semi Final - Prata","Semi Final - Ouro","3º Lugar - Prata","3º Lugar - Ouro","Final - Prata","Final - Ouro"];
-            var grupoIntegracao2 = [integracao2GrupoA,integracao2GrupoB,integracao2GrupoC,integracao2GrupoD];
-            var eliminatorioIntegracao2 = [integracao2Quartasfinal,integracao2SemifinalPrata,integracao2SemifinalOuro,integracao23lugarPrata,integracao23lugarOuro,integracao2finalPrata,integracao2finalOuro];
-            copa(grupoIntegracao2,fasestorneioIntegracao2,eliminatorioIntegracao2,soma);
-            soma = soma + grupoIntegracao2.length; 
-            escreverHr()
-            
-            var fasestorneioIntegracao1 = ["1º Torneio Integração","Semi Final - Bronze","Semi Final - Prata","Semi Final - Ouro","3º Lugar - Bronze","3º Lugar - Prata","3º Lugar - Ouro","Final - Bronze","Final - Prata","Final - Ouro"];
-            var grupoIntegracao1 = [integracao1GrupoA,integracao1GrupoB,integracao1GrupoC,integracao1GrupoD];
-            var eliminatorioIntegracao1 = [integracao1SemifinalBronze,integracao1SemifinalPrata,integracao1SemifinalOuro,integracao13lugarBronze,integracao13lugarPrata,integracao13lugarOuro,integracao1finalBronze,integracao1finalPrata,integracao1finalOuro];
-            copa(grupoIntegracao1,fasestorneioIntegracao1,eliminatorioIntegracao1,soma);
-            soma = soma + grupoIntegracao1.length; 
-            
+           var fasesTorneioIntegracao5 = ["2º Taça Cidade de Canoas de Futebol de Mesa","Quartas de final","Semi final - Bronze","Semi Final - Prata","Semi Final - Ouro","3º Lugar - Prata","3º Lugar - Ouro","Final - Pratina","Final - Bronze","Final - Prata","Final - Ouro"];
+            var grupoIntegracao5 = [integracao6GrupoA,integracao6GrupoB,integracao6GrupoC,integracao6GrupoD,integracao6GrupoE,integracao6GrupoF];
+            var eliminatorioIntegracao5 = [integracaoQuartas5finalOuro,integracao5SemifinalBronze,integracao5SemifinalPrata,integracao5SemifinalOuro,integracao53lugarPrata,integracao53lugarOuro,integracao5finalPlatina,integracao5finalBronze,integracao5finalPrata,integracao5finalOuro
+];            
+            copa(grupoIntegracao5,fasesTorneioIntegracao5,eliminatorioIntegracao5,0);
         </script>
         <script src="js/btnMenu.js"></script>
     </body>

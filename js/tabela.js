@@ -21,7 +21,6 @@ function criarTabelaToda(campeonato ,head, body,i ,quantidade , nome){
     thead.appendChild(tr);
     tbody.classList.add(classeTbody);
     criarTh(campanha , th , tr);
-    esconderClasse(quantidade , i , thead , tbody);
     tabela.appendChild(tbody);
     secao.appendChild(tabela);
     comeco(campeonato  , "."+classeTbody) 
@@ -36,13 +35,6 @@ function grupos(nome,campanha,caption,grupo,i){
         caption.textContent = (i+1)+nome;
     }     
     return campanha;
-}
-
-function esconderClasse(quantidade , i , thead , tbody){
-    if(quantidade != i){
-        thead.classList.add("invisivel");
-        tbody.classList.add("invisivel");
-    }
 }
 
 function criarTh(campanha , th , tr){
@@ -201,7 +193,6 @@ function grupo(grupos,nome,soma){
 }
 
 function eliminatorio(eliminatorios,fase ,head,body){
-
     var classeTabela = "table-eliminatorio";
     var classeTbody = body;
     var classeThead = head;
@@ -364,3 +355,4 @@ function escreverHr(){
     var hr = document.createElement("hr");
     secao.appendChild(hr);
 }
+

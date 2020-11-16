@@ -1,2 +1,3 @@
-var postA = ["O Encontro de todas Quintas-Feiras","lucfm-30-10-20.jpg","Mais uma rodada do nosso campeonato."];
-var post1 = ["Voltamos!!!!","voltemos.jpg","Depois de um tempo parado por causa da pandemia. Estamos voltando com o nosso 9º campeonato."];
+var postA = ["3º Torneio Programação da Republica","lucfm-3-programacao.jpg","Neste Sabado 14/11/2020 , A L.U.C.F.M. Participou do 3º Torneio da Republica. Sendo representado por Fernando , Jamur , Paulo Marcos  e  Paulo Renato . Conquistando o terceiro lugar da serie prata pelo Paulo Marcos e 4º lugar da serie ouro pelo Jamur. Agradecemos aos nossos representantes por nos representar nesse 3º torneio da republica.","Neste Sabado 14/11/2020 , A L.U.C.F.M. Participou do 3º Torneio da Republica."];
+var post2 = ["O Encontro de todas Quintas-Feiras","lucfm-30-10-20.jpg","Mais uma rodada do nosso campeonato.",,"Mais uma rodada do nosso campeonato."];
+var post1 = ["Voltamos!!!!","voltemos.jpg","Depois de um tempo parado por causa da pandemia. Estamos voltando com o nosso 9º campeonato.","Depois de um tempo parado por causa da pandemia. Estamos voltando com o nosso 9º campeonato."];

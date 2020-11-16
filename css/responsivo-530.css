@@ -28,6 +28,8 @@
     .fundoGrande{
         width: 88%;
     }
-
+    .competicaoDireita{
+        display:none;
+    }
 }
 
